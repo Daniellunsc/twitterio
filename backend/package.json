@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/Daniellunsc/twitterio/issues"
   },
-  "homepage": "https://github.com/Daniellunsc/twitterio#readme"
+  "homepage": "https://github.com/Daniellunsc/twitterio#readme",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.3"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
