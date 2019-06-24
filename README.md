@@ -9,3 +9,8 @@
 - [X] Allow me to make posts
 - [ ] Fetch my tweets
 - [ ] Fetch my timeline
+
+# What's used to build it?
+
+- Angular for Backend
+- NodeJS + Express on Backend
