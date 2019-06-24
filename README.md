@@ -5,6 +5,7 @@ I will update as soon it gets some functionality.
 
 # What i plan to do ?
 
-- [ ] Connect it with my twitter account
-- [ ] Allow me to make posts
-- [ ] Keep this updated.
+- [X] Connect it with my twitter account
+- [X] Allow me to make posts
+- [ ] Fetch my tweets
+- [ ] Fetch my timeline
