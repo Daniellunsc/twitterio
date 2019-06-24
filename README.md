@@ -1,7 +1,7 @@
 # What does it do?
-Actually, nothing.
+- Allow me to login on the application using my twitter account
 
-I will update as soon it gets some functionality.
+- Make tweets
 
 # What i plan to do ?
 
