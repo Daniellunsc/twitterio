@@ -1,0 +1,29 @@
+<h2 mat-dialog-title class="mat-h2">Hi! Thanks for testing my app.</h2>
+<div mat-dialog-content>
+
+  <div *ngIf="data.success">
+    <p>Check your twitter to see your brand new tweet!</p>
+    <mat-divider></mat-divider>
+  </div>
+
+  <h3>What's the objective of this?</h3>
+  <ul>
+    <li>Learn Angular!</li>
+    <li>Learn about Passport.js</li>
+    <li>Learn about Twitter API</li>
+  </ul>
+  <mat-divider></mat-divider>
+  <h3>Some things you need to know:</h3>
+  <ul>
+    <li>You can see this code on my GITHUB.</li>
+    <li *ngIf="!data.success">You can tweet from here! Check it out!</li>
+    <li>I am not storing any of your data.</li>
+    <li>The session is saved during server execution, if it goes down... BOOM!</li>
+    <li>This is a project to learn new things and challenge me.</li>
+  </ul>
+</div>
+<div mat-dialog-actions>
+  <p>Would you like to visit my github?</p>
+  <button mat-button cdkFocusInitial>Yes! Let's go!</button>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+</div>

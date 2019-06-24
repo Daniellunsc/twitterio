@@ -1,0 +1,42 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="min-height: 100vh;">
+  <div fxLayout="row" fxLayoutAlign="center center" style="min-height: 100vh">
+    <div >
+      <mat-card fxFlex>
+        <mat-card-header>
+          <mat-card-title>Welcome,
+            <span *ngIf="!loggedIn">Please Log-in </span>
+            <span *ngIf="loggedIn"> {{userProfile.userName}} </span>
+          </mat-card-title>
+          <mat-card-subtitle *ngIf="loggedIn">@{{userProfile.userScreen}}</mat-card-subtitle>
+        </mat-card-header>
+
+        <mat-card-content>
+          <div fxLayout="column" fxLayoutAlign="space-between" *ngIf="!loggedIn">
+            <a href="/api/auth" mat-raised-button>Sign-in with twitter</a>
+          </div>
+          <div *ngIf="loggedIn">
+            <mat-form-field style="min-width: 100%">
+              <textarea [(ngModel)]="textToTweet" matInput placeholder="Make a tweet!" matTextareaAutosize matAutosizeMinRows=5 matAutosizeMaxRows=5></textarea>
+            </mat-form-field>
+          </div>
+          <div fxLayout="row"  fxLayoutAlign="space-between" *ngIf="loggedIn">
+              <button mat-raised-button color="primary" *ngIf="textToTweet" (click)="createTweet()">Create a tweet</button>
+              <button [ngStyle]="{'min-width' : textToTweet ? 'auto' : '100%'}" (click)="logout()"mat-raised-button color="accent">Logout</button>
+          </div>
+        </mat-card-content>
+
+        <mat-card-footer fxLayout="row" fxLayoutAlign="center">
+            <mat-card-subtitle>Twitterio - Daniel Luna</mat-card-subtitle>
+          <div fxLayout="row"fxLayoutAlign="flex-end">
+            <i  class="material-icons" (click)="showDialog(false)">
+              help
+            </i>
+          </div>
+        </mat-card-footer>
+      </mat-card>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
